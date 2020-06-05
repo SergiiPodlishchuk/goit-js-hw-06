@@ -1,3 +1,5 @@
+// import users from './users.js';
+
 const users = [
   {
     id: "701b29c3-b35d-4cf1-a5f6-8b12b29a5081",
@@ -151,7 +153,7 @@ console.log("<-------task-10------>");
 const getSortedUniqueSkills = (users) =>
   users
     .reduce((acc, user) => [...acc, ...user.skills], [])
-    .sort((a, b) => a.localeCompare(b, "en"))
-    .filter((elem, index, array) => array.indexOf(elem) === index);
+    .filter((elem, index, array) => array.indexOf(elem) === index)
+    .sort((a, b) => a.localeCompare(b, "en"));
 console.log(getSortedUniqueSkills(users));
 // [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]
